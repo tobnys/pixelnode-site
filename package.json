@@ -1,0 +1,35 @@
+{
+  "name": "pixelnode-site",
+  "version": "1.0.0",
+  "description": "2D game site",
+  "keywords": [
+    "Pixelnode"
+  ],
+  "devDependencies": {
+    "expose-loader": "0.7.5",
+    "ts-loader": "6.0.4",
+    "typescript": "3.5.2",
+    "webpack": "4.35.2",
+    "webpack-cli": "3.3.5",
+    "webpack-dev-server": "3.7.2"
+  },
+  "dependencies": {
+    "css-loader": "^3.2.0",
+    "node-sass": "^4.12.0",
+    "sass-loader": "^7.2.0",
+    "style-loader": "^1.0.0"
+  },
+  "scripts": {
+    "dev": "webpack --mode development && webpack-dev-server --mode development",
+    "build": "webpack --mode production && webpack-dev-server --mode production"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tobnys/pixelnode.git"
+  },
+  "author": {
+    "name": "Toby Nyström",
+    "email": "tobnystrom@gmail.com"
+  },
+  "license": "ISC"
+}
