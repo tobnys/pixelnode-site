@@ -7,7 +7,6 @@
 {% endblock %}
 
 	<body class="{{body_class}}" data-template="base.twig">
-		<a class="skip-link screen-reader-text" href="#content">{{ _e( 'Skip to content') }}</a>
 		<header class="header" >
 			{% block header %}
 				<div class="wrapper">
@@ -16,23 +15,25 @@
 					</h1>
 					<nav id="nav-main" class="nav-main" role="navigation">
 						{% include "menu.twig" with {'items': menu.get_items} %}
-					</nav><!-- #nav -->
+					</nav>
 				</div>
 			{% endblock %}
 		</header>
 
 		<section id="content" role="main" class="content-wrapper">
-			{% if title %}<h1>{{title}}</h1>{% endif %}
-			<div class="wrapper {{sidebar_class}}">
-				{% block content %}
-					Sorry, no content
-				{% endblock %}
-			</div>
-			{% if sidebar %}
-				<aside class="layout-sidebar">
-					{{sidebar}}
-				</aside>
-			{% endif %}
+      <div class="login-form">
+        <h1>Temporary login</h1>
+        <div>
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username">
+        </div>
+
+        <div>
+            <label for="pass">Password:</label>
+            <input type="password" id="pass" name="password" minlength="8" required>
+        </div>
+        <input type="submit" value="Sign in">
+      </div>
 		</section>
 
 		{% block footer %}
