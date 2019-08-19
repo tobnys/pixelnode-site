@@ -1,0 +1,6 @@
+node_modules
+dist
+
+# WP
+wp-config.php
+wp-content/uploads
